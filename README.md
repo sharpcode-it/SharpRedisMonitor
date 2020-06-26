@@ -1,5 +1,5 @@
 # CoreRedisStats
-A Web application for real-time monitoring of Redis, developed in ASP.NET Core with Razor Pages, fully compatible for both on-premise and cloud instances. The dashboard is developed with Bootstrap and AdminLTE.
+A Web application for real-time monitoring of Redis, developed in ASP.NET Core with Razor Pages, fully compatible for both on-premise and cloud instances. The dashboard is developed with Bootstrap and AdminLTE. This project was born with the aim of giving an alternative to the standard Ruby based redis-stat.
 
 ### How it works
 **CoreRedisStack** uses StackExchange.Redis as client to Redis instance and retrieves information and statistics in real time by invoking the info command. Statistics are displayed in the main dashboard which currently has the following features:
@@ -10,6 +10,7 @@ A Web application for real-time monitoring of Redis, developed in ASP.NET Core w
 - General informations
 
 ### Dashboard
+![Alt text](/wiki/img/Dashboard.png?raw=true)
 
 ### How to use it
 To use the application, simply edit the appsettings.json file by inserting the connection to the Redis instance.

@@ -10,7 +10,7 @@ A Web application for real-time monitoring of Redis, developed in ASP.NET Core w
 - General informations
 
 ### Dashboard
-![Alt text](/wiki/img/Dashboard.png?raw=true)
+![Alt text](/wiki/img/Dashboard.PNG?raw=true)
 
 ### How to use it
 To use the application, simply edit the appsettings.json file by inserting the connection to the Redis instance.

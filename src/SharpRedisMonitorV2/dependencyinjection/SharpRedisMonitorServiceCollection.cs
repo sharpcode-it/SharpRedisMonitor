@@ -16,6 +16,7 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 options.Conventions.AddPageRoute("/Redis/RedisStats", "");
             });
+            
             services.AddAntiforgery(o => o.HeaderName = "XSRF-TOKEN");
             //services.Configure<Config>(options => Configuration.GetSection("Config").Bind(options));
             services.Configure<Config>(config);

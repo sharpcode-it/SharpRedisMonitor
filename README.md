@@ -54,6 +54,9 @@ If you'd like to contribute, please fork, fix, commit and send a pull request fo
  * [Forking a GitHub repository](http://help.github.com/fork-a-repo/)
  * [The simple guide to GIT guide](http://rogerdudler.github.com/git-guide/)
  * [Open an issue](https://github.com/sharpcode-it/SharpRedisMonitor/issues) if you encounter a bug or have a suggestion for improvements/features
+ 
+### Project Maintainer
+[Francesco Del Re](https://github.com/engineering87)
 
 ### Licensee
 SharpRedisMonitor source code is available under MIT License, see license in the source.

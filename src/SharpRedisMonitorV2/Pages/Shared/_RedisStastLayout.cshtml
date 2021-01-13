@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>@ViewData["Title"] - SharpRedisMonitor</title>
+        <link rel="stylesheet" href="/_content/SharpRedisMonitorV2/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/_content/SharpRedisMonitorV2/css/site.css" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="/_content/SharpRedisMonitorV2/lib/adminlte/plugins/fontawesome-free/css/all.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <!-- Tempusdominus Bbootstrap 4 -->
+        <link rel="stylesheet" href="/_content/SharpRedisMonitorV2/lib/adminlte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+        <!-- iCheck -->
+        <link rel="stylesheet" href="/_content/SharpRedisMonitorV2/lib/adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+        <!-- JQVMap -->
+        <link rel="stylesheet" href="/_content/SharpRedisMonitorV2/lib/adminlte/plugins/jqvmap/jqvmap.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="/_content/SharpRedisMonitorV2/lib/adminlte/dist/css/adminlte.min.css">
+        <!-- overlayScrollbars -->
+        <link rel="stylesheet" href="/_content/SharpRedisMonitorV2/lib/adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+        <!-- Daterange picker -->
+        <link rel="stylesheet" href="/_content/SharpRedisMonitorV2/lib/adminlte/plugins/daterangepicker/daterangepicker.css">
+        <!-- summernote -->
+        <link rel="stylesheet" href="/_content/SharpRedisMonitorV2/lib/adminlte/plugins/summernote/summernote-bs4.css">
+        <!-- Google Font: Source Sans Pro -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Header -->
+        @*<header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    <a class="navbar-brand" a href="https://github.com/sharpcode-it/SharpRedisMonitor">SharpRedisMonitor</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Redis/RedisStats">Dashboard</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>*@
+        <!-- /Header -->
+        <!-- Body -->
+        <main role="main" class="pb-3 mb-5">
+            @RenderBody()
+        </main>
+        <!-- / Body -->
+        <!-- Footer -->
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2020 - SharpRedisMonitor - @typeof(SharpRedisMonitorV2.Models.ClientsModel).Assembly.GetName().Version
+            </div>
+        </footer>
+        <!-- / Footer -->  
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <!-- jQuery UI 1.11.4 -->
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+        <script src="/_content/SharpRedisMonitorV2/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/_content/SharpRedisMonitorV2/js/site.js" asp-append-version="true"></script>
+        <!-- ChartJS -->
+        <script src="/_content/SharpRedisMonitorV2/lib/adminlte/plugins/chart.js/Chart.min.js"></script>
+        <!-- Sparkline -->
+        <script src="/_content/SharpRedisMonitorV2/lib/adminlte/plugins/sparklines/sparkline.js"></script>
+        <!-- JQVMap -->
+        <script src="/_content/SharpRedisMonitorV2/lib/adminlte/plugins/jqvmap/jquery.vmap.min.js"></script>
+        <script src="/_content/SharpRedisMonitorV2/lib/adminlte/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+        <!-- jQuery Knob Chart -->
+        <script src="/_content/SharpRedisMonitorV2/lib/adminlte/plugins/jquery-knob/jquery.knob.min.js"></script>
+        <!-- daterangepicker -->
+        <script src="/_content/SharpRedisMonitorV2/lib/adminlte/plugins/moment/moment.min.js"></script>
+        <script src="/_content/SharpRedisMonitorV2/lib/adminlte/plugins/daterangepicker/daterangepicker.js"></script>
+        <!-- Tempusdominus Bootstrap 4 -->
+        <script src="/_content/SharpRedisMonitorV2/lib/adminlte/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+        <!-- Summernote -->
+        <script src="/_content/SharpRedisMonitorV2/lib/adminlte/plugins/summernote/summernote-bs4.min.js"></script>
+        <!-- overlayScrollbars -->
+        <script src="/_content/SharpRedisMonitorV2/lib/adminlte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="/_content/SharpRedisMonitorV2/lib/adminlte/dist/js/adminlte.js"></script>
+        @RenderSection("Scripts", required: false)
+    </body>
+</html>

@@ -26,6 +26,7 @@ namespace CoreRedisStats.Pages
 
         public void OnGet()
         {
+            
             var info = _redisAccess.GetInfo(out var error);
             var input = RedisManager.GetRedisModel(info);
             input.Servers = _options.Servers;

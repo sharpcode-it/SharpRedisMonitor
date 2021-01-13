@@ -5,9 +5,10 @@
  */
 function GetCallLocation() {
     let path = window.location.pathname;
-    const pathSplit = path.split("/");
-    if (pathSplit.length >= 2)
-        path = "/" + pathSplit[1];
+    //const pathSplit = path.split("/");
+    //if (pathSplit.length >= 2) {
+    //    //path = "/" + pathSplit.slice(0, 3).join("/");
+    //}
     return document.location.origin + path;
 }
 

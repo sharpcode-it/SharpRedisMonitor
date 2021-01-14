@@ -18,9 +18,9 @@ namespace Microsoft.Extensions.DependencyInjection
             });
             
             services.AddAntiforgery(o => o.HeaderName = "XSRF-TOKEN");
-            //services.Configure<Config>(options => Configuration.GetSection("Config").Bind(options));
             services.Configure<Config>(config);
-            services.AddSingleton<IRedisService, RedisService>();
+            //services.AddSingleton<IRedisService, RedisService>();
+            services.AddSingleton<IRedisServiceFactory, RedisServiceFactory>();
 
             return services;
         }

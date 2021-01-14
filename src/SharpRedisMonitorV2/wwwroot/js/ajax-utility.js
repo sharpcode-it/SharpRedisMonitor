@@ -3,13 +3,25 @@
  * Elimina eventuali path estesi.
  * @returns {path} path base + controller
  */
-function GetCallLocation() {
+function GetCallLocation(params) {
     let path = window.location.pathname;
     //const pathSplit = path.split("/");
     //if (pathSplit.length >= 2) {
     //    //path = "/" + pathSplit.slice(0, 3).join("/");
     //}
-    return document.location.origin + path;
+    //return document.location.origin + path;
+    var href = window.location.href;
+    if (href.indexOf("?") == -1) {
+        href = href + "?";
+    } else {
+        href = href + "&"
+    }
+
+    for (i = 0; i < params.length; i++) {
+        href = href + params[i] + "&"
+    }
+
+    return href;
 }
 
 /**

@@ -1,6 +1,7 @@
 [![Github license](mit.svg)](https://github.com/engineering87/CoreRedisStats/blob/master/LICENSE)
 
-# SharpRedisMonitor
+<img src="https://github.com/sharpcode-it/SharpRedisMonitor/blob/master/SharpRedisMonitor.jpeg" width="350">
+
 A Web application for real-time monitoring of Redis, developed in ASP.NET Core with Razor Pages, fully compatible for both on-premise and cloud instances. The dashboard is developed with Bootstrap and AdminLTE. This project was born with the aim of giving an alternative to the standard Ruby based redis-stat.
 
 ### How it works

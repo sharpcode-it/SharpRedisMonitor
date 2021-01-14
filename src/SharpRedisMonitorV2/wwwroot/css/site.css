@@ -69,3 +69,11 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+.logo {
+    line-height: .8;
+    margin-right: .5rem;
+    margin-top: -3px;
+    max-height: 160px;
+    width: auto;
+}

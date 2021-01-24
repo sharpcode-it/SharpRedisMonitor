@@ -6,6 +6,8 @@ namespace SharpRedisMonitorV2.Services
 {
     public interface IRedisService
     {
+        byte Index { get; set; }
+        string Name { get; }
         string GetStatus();
         long GetOperationCount();
         RedisResult GetInfo(out string error);

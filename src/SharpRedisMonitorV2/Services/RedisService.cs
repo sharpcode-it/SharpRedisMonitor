@@ -9,12 +9,15 @@ namespace SharpRedisMonitorV2.Services
 {
     public class RedisService : IRedisService
     {
-        private readonly Config _options;
+        private readonly RedisServer _redisServer;
 
         /// <summary>
         /// The Redis connections Multiplexer
         /// </summary>
         private readonly Lazy<ConnectionMultiplexer> _connection;
+
+        public byte Index { get; set; }
+        public string Name { get => _redisServer?.Name; }
 
         /// <summary>
         /// Return a Redis connection
@@ -22,10 +25,11 @@ namespace SharpRedisMonitorV2.Services
         /// <returns></returns>
         public ConnectionMultiplexer GetConnection() => _connection.Value;
 
-        public RedisService(IOptions<Config> options)
+        public RedisService(byte index, RedisServer options)
         {
-            _options = options.Value;
-            var conn = ConfigurationOptions.Parse(_options.Servers[0].ConnectionString);
+            Index = index;
+            _redisServer = options;
+            var conn = ConfigurationOptions.Parse(_redisServer.ConnectionString);
             conn.AllowAdmin = true;
             _connection = new Lazy<ConnectionMultiplexer>(() => ConnectionMultiplexer.Connect(conn));
         }

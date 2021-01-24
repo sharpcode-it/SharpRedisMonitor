@@ -3,7 +3,7 @@
  * */
 function UpdateCommands() {
     $.ajax({
-        url: GetCallLocation() + "?handler=UpdateCommands",
+        url: GetCallLocation(["handler=UpdateCommands"]),
         beforeSend: function (xhr) {
             xhr.setRequestHeader("XSRF-TOKEN",
                 $('input:hidden[name="__RequestVerificationToken"]').val());

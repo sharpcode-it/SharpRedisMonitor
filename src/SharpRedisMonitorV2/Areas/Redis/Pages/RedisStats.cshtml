@@ -113,7 +113,7 @@
                             <!-- small box -->
                             <div class="small-box bg-success">
                                 <div class="inner">
-                                    <h3 id="usedMemoryValue">@Model.Input.MemoryModel.UsedMemory</h3>
+                                    <h3 id="usedMemoryValue">@Model.Input.MemoryModel?.UsedMemory</h3>
                                     <p>Used Memory (%)</p>
                                 </div>
                                 <div class="icon">
@@ -139,7 +139,7 @@
                             <!-- small box -->
                             <div class="small-box bg-danger">
                                 <div class="inner">
-                                    <h3 id="serverLoadValue">@Model.Input.CpuModel.ServerLoad</h3>
+                                    <h3 id="serverLoadValue">@Model.Input.CpuModel?.ServerLoad</h3>
                                     <p>CPU Usage (%)</p>
                                 </div>
                                 <div class="icon">

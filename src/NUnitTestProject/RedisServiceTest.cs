@@ -4,8 +4,8 @@ using NUnit.Framework;
 using Microsoft.Extensions.Options;
 using Microsoft.Extensions.Configuration;
 using System.IO;
-using CoreRedisStats.Services;
-using CoreRedisStats.Configuration;
+using SharpRedisMonitorV2.Services;
+using SharpRedisMonitorV2.Configuration;
 
 namespace NUnitTestProject
 {
@@ -44,6 +44,13 @@ namespace NUnitTestProject
         {
             var info = _service.GetInfo(out var error);
             Assert.IsNotNull(info);
+        }
+
+        [Test]
+        public void TestKeys()
+        {
+            var keys = _service.GetKeys();
+            Assert.IsNotNull(keys);
         }
     }
 }

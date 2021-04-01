@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CoreRedisStats\CoreRedisStats.csproj" />
+    <ProjectReference Include="..\SharpRedisMonitorV2\SharpRedisMonitorV2.csproj" />
   </ItemGroup>
 
 </Project>

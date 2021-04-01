@@ -29,8 +29,17 @@ function UpdateCommands() {
 function UpdateValues(model) {
     if (model !== null) {
         $("#connectedClientValue").html(model.clientsModel.connectedClients);
-        $("#usedMemoryValue").html(model.memoryModel.usedMemory);
-        $("#serverLoadValue").html(model.cpuModel.serverLoad);
+        if (model.memoryModel !== null) {
+            $("#usedMemoryValue").html(model.memoryModel.usedMemory);
+        } else {
+            $("#usedMemoryValue").html("N/A");
+        }
+        if (model.cpuModel !== null) {
+            $("#serverLoadValue").html(model.cpuModel.serverLoad);
+        } else {
+            $("#serverLoadValue").html("N/A");
+        }
+
         $("#hitsValue").html(model.keyspaceModel.hits);
         $("#missesValue").html(model.keyspaceModel.misses);
         $("#expiredValue").html(model.keyspaceModel.expired);

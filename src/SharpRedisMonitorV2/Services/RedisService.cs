@@ -4,6 +4,7 @@ using SharpRedisMonitorV2.Configuration;
 using Microsoft.Extensions.Options;
 using StackExchange.Redis;
 using System;
+using System.Collections.Generic;
 
 namespace SharpRedisMonitorV2.Services
 {
@@ -57,6 +58,16 @@ namespace SharpRedisMonitorV2.Services
                 error = e.Message;
                 return default;
             }
+        }
+
+        public IEnumerable<RedisKey> GetKeys()
+        {
+            //return GetConnection().GetDatabase().Execute("KEYS");
+            
+            var endpoints = GetConnection().GetEndPoints();
+
+            return GetConnection().GetServer(endpoints[0]).Keys();
+
         }
     }
 }

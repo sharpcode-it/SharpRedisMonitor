@@ -42,16 +42,16 @@ namespace SharpRedisMonitorV2.Managers
             };
 
             // build the MemoryModel
-            var memoryModel = new MemoryModel()
+            var memoryModel = dictionary.ContainsKey("used_memory_dataset_perc") ?  new MemoryModel()
             {
                 UsedMemory = GetPercentage(dictionary["used_memory_dataset_perc"], true)
-            };
+            } : (MemoryModel) null;
 
             // build the CPU model
-            var cpuModel = new CpuModel()
+            var cpuModel = dictionary.ContainsKey("server_load") ? new CpuModel()
             {
                 ServerLoad = GetPercentage(dictionary["server_load"])
-            };
+            } : (CpuModel) null;
 
             // build the KeyspaceModel
             var keyspaceModel = new KeyspaceModel()
@@ -62,10 +62,10 @@ namespace SharpRedisMonitorV2.Managers
             };
 
             // build the CommandModel
-            var commandModel = new CommandModel()
+            var commandModel =  new CommandModel()
             {
-                OperationPerSec = Convert.ToInt32(dictionary["instantaneous_ops_per_sec"]),
-                BytesReceivedPerSec = Convert.ToInt32(dictionary["bytes_received_per_sec"])
+                OperationPerSec = Convert.ToInt32(dictionary.ContainsKey("instantaneous_ops_per_sec") ? dictionary["instantaneous_ops_per_sec"] : "0"),
+                BytesReceivedPerSec = Convert.ToInt32(dictionary.ContainsKey("bytes_received_per_sec") ? dictionary["bytes_received_per_sec"] : "0")
             };
 
             var redisStatsModel = new RedisModel
